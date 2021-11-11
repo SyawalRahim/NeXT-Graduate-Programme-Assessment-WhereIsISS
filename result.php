@@ -67,14 +67,6 @@
 			
 			$bdata = $_SESSION["b"];
 			
-			//to get all current news source
-			$nsource = array($last->source_name);
-			for($i=0;$i<$last->position;$i++){
-				$nsource[$i] = $bdata-> news_results[$i] -> source_name;
-			}
-			$nsource[count($nsource)] = "All Source"; 
-			$nsource = array_values(array_unique($nsource,SORT_REGULAR));
-			
 			//to use with html select tag
 				
 			echo"<table class='table' style='width:100%'>";
@@ -87,7 +79,7 @@
 			echo"<tbody>";
 			for($a=0;$a < $last->position; $a++){
 				echo" <tr>";
-				echo"<td> <h3>".$bdata-> news_results[$a]-> position.". ".$bdata-> news_results[$a]-> title."</h3><br> Source: ".$bdata-> news_results[$a] -> source_name."<br> URL:<a style='font-size: 10px' href='".$bdata-> news_results[$a]-> url."'>".$bdata-> news_results[$a]-> url."</a>  Posted ".$bdata-> news_results[$a]-> uploaded."<br> Snippet: ".$bdata-> news_results[$a]-> snippet."&nbsp</td>";
+				echo"<td> <h3>".$bdata."</h3></td>";
 				echo" </tr>";
 			}
 			echo" </tbody>";
