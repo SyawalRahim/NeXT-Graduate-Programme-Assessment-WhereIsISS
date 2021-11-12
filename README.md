@@ -5,4 +5,4 @@ I am still noob in using github, so i directly commit the changes in main. See h
 Just using wampserver and notepad++.\
 Frontend? Just slapping some bootstrap from an old project.\
 Backend? I think its 100% in PHP.
-### View Demo [Here](syawalrahimcode.xyz).
+### View Demo [Here](https://syawalrahimcode.xyz/index.html).
