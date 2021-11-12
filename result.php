@@ -2,8 +2,9 @@
 	error_reporting(0);
 	session_start();
 	
-	$_SESSION["a"]=$adata;
-	$_SESSION["b"]=$bdata;
+	$convert_read=$_SESSION["a"];
+	$mergedUnix=$_SESSION["b"];
+	$mergedCoord=$_SESSION["c"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +35,7 @@
 
   <body id="page-top">
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-      <a class="navbar-brand mr-1" href="#">ISS Doko? - Look For ISS Location</a>
+      <a class="navbar-brand mr-1" href="index.html">ISS Doko? - Look For ISS Location</a>
       <!-- Navbar -->
       
     </nav>
@@ -63,37 +64,37 @@
                              Search Results
                         </div>
 					<div class="panel-body">
-				<?php
-			
-			$bdata = $_SESSION["b"];
-			
+<?php
+						
 			//to use with html select tag
+						
 				
 			echo"<table class='table' style='width:100%'>";
 			echo"<thead class='thead-dark'>";
 			echo"<tr style='text-align: center'>";
-			echo"<th scope='col'>  </th>";
+			echo"<th scope='col'>".$convert_read->format('Y-m-d h:ia')."</th>";
 	
 			echo"</tr>";
 			echo"</thead>";
 			echo"<tbody>";
-			for($a=0;$a < $last->position; $a++){
+			for($i=0;$i < 13; $i++)
+			{
 				echo" <tr>";
-				echo"<td> <h3>".$bdata."</h3></td>";
+				echo"<td> <h3>".$mergedUnix[$i]->format('Y-m-d h:ia')."</h3><br>".$mergedCoord[$i]."</td>";
 				echo" </tr>";
 			}
 			echo" </tbody>";
 			echo" </table>";
 					
 				
-				?>
+?>
 						</div>
 					</div>
 				</div>				
 		
         <!-- Sticky Footer -->
         <footer style="position: fixed; bottom: 0; width: 100%; text-align: center; padding: 3px; background-color: #EBEDEF; color: black;">
-            <span>.....</span>
+            <span>syawalrahimcode.xyz</span>
 
         </footer>
       </div>
