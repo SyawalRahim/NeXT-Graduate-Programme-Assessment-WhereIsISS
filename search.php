@@ -135,6 +135,7 @@
 	
 	//merge all coordinate
 	$mergedCoord=array_merge($coordArrayneg,$coordArraypos);
+	$mergedCoordinate=array_merge($coordArrayneg,$coordArraypos);
 	//echo '<pre>'; print_r($mergedCoord); echo '</pre>';
 	
 	//getting the location only from json
@@ -155,6 +156,7 @@
 	$_SESSION["a"]=$convert_read;
 	$_SESSION["b"]=$tarraymerged;
 	$_SESSION["c"]=$mergedCoord;
+	$_SESSION["d"]=$mergedCoordinate;
 	header("Location:result.php");
 	
 ?>

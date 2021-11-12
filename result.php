@@ -5,6 +5,7 @@
 	$convert_read=$_SESSION["a"];
 	$mergedUnix=$_SESSION["b"];
 	$mergedCoord=$_SESSION["c"];
+	$mergedCoordinate=$_SESSION["d"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,7 +69,7 @@
 						
 			//to use with html select tag
 						
-				
+			echo $mergedCoordinate[1];
 			echo"<table class='table' style='width:100%'>";
 			echo"<thead class='thead-dark'>";
 			echo"<tr style='text-align: center'>";
@@ -77,10 +78,12 @@
 			echo"</tr>";
 			echo"</thead>";
 			echo"<tbody>";
+			
 			for($i=0;$i < 13; $i++)
 			{
+				$imagelink="https://www.google.com/maps/@?api=1&map_action=map&center=".$mergedCoordinate[$i]."&zoom=12&basemap=terrain";
 				echo" <tr>";
-				echo"<td> <h3>".$mergedUnix[$i]."</h3><br>".$mergedCoord[$i]."</td>";
+				echo"<td> <h3>".$mergedUnix[$i]."</h3><br>".$mergedCoord[$i]."<br><a target = '_blank' href=".$imagelink.">Go to Google Map</a></td>";
 				echo" </tr>";
 			}
 			echo" </tbody>";
