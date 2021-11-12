@@ -69,7 +69,6 @@
 						
 			//to use with html select tag
 						
-			echo $mergedCoordinate[1];
 			echo"<table class='table' style='width:100%'>";
 			echo"<thead class='thead-dark'>";
 			echo"<tr style='text-align: center'>";
