@@ -80,7 +80,7 @@
 			for($i=0;$i < 13; $i++)
 			{
 				echo" <tr>";
-				echo"<td> <h3>".$mergedUnix[$i]->format('Y-m-d h:ia')."</h3><br>".$mergedCoord[$i]."</td>";
+				echo"<td> <h3>".$mergedUnix[$i]."</h3><br>".$mergedCoord[$i]."</td>";
 				echo" </tr>";
 			}
 			echo" </tbody>";
